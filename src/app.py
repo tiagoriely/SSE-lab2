@@ -24,8 +24,6 @@ def submit():
 
 
 def process_query(query):
-    query = request.args.get("q", "").strip().lower()
-
     responses = {"dinosaurs": "Dinosaurs ruled the"
                               " Earth 200 million years ago"}
     return responses.get(query.strip().lower(), "Unknown")
