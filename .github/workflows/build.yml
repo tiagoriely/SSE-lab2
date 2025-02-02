@@ -24,6 +24,6 @@ jobs:
         - name: ImPaaS-Deploy
           uses: /impaas/impaas-deploy@v3
           with:
-            app-name: tg1424-sse-2425
+            app-name: tg1424-sse-app
             deployment-token: ${{ secrets.TSURU_TOKEN_SSE }}
             method: PLATFORM
