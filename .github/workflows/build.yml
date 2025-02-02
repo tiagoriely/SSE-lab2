@@ -41,4 +41,5 @@ jobs:
       - name: Install dependencies
         run: pip install pytest
       - name: Run Tests
+        working-directory: src
         run: pytest *.py
