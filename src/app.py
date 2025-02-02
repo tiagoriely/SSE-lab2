@@ -23,7 +23,10 @@ def submit():
         return render_template("badminton.html", name=input_name)
 
 
+@app.route("/query", methods=["GET"])
 def process_query(query):
+    query = request.args.get("q", "").strip().lower()
+
     responses = {"dinosaurs": "Dinosaurs ruled the"
                  " Earth 200 million years ago"}
     return responses.get(query, "Unknown")
