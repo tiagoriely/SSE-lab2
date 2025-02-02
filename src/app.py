@@ -21,3 +21,8 @@ def submit():
         return render_template("tableTennis.html", name=input_name)
     if input_name == "Badminton":
         return render_template("badminton.html", name=input_name)
+
+
+def process_query(query):
+    responses = {"dinosaurs": "Dinosaurs ruled the Earth 200 million years ago"}
+    return responses.get(query, "Unknown")
