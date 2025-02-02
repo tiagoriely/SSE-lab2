@@ -29,4 +29,4 @@ def process_query(query):
 
     responses = {"dinosaurs": "Dinosaurs ruled the"
                  " Earth 200 million years ago"}
-    return responses.get(query, "Unknown")
+    return responses.get(query.strip().lower(), "Unknown")
