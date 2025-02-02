@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -32,7 +32,7 @@ def process_query(query):
 
 
 @app.route("/query", methods=["GET"])
-def query_route():
-    """Flask route to handle HTTP requests."""
-    query = request.args.get("q", "")
-    return jsonify({"response": process_query(query)})
+def query():
+    query_param = request.args.get("q", " ")
+    result = process_query(query_param)
+    return result
