@@ -24,5 +24,6 @@ def submit():
 
 
 def process_query(query):
-    responses = {"dinosaurs": "Dinosaurs ruled the Earth 200 million years ago"}
+    responses = {"dinosaurs": "Dinosaurs ruled"
+                 "the Earth 200 million years ago"}
     return responses.get(query, "Unknown")
